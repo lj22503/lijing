@@ -1,6 +1,6 @@
 // 主要JavaScript文件
-window.addEventListener('load', function() {
-    console.log('页面完全加载触发');
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOMContentLoaded触发');
     console.log('personalInfo变量:', typeof personalInfo !== 'undefined' ? '已定义' : '未定义');
     if (typeof personalInfo !== 'undefined') {
         console.log('personalInfo内容:', personalInfo);
@@ -164,56 +164,56 @@ function populatePersonalInfo() {
     console.log('populatePersonalInfo函数执行');
     try {
         // 使用content.js中的数据，如果存在的话
-        console.log('检查personalInfo:', typeof personalInfo !== 'undefined' ? personalInfo.name : '未定义');
-        if (typeof personalInfo !== 'undefined') {
+        console.log('检查personalInfo:', typeof window.personalInfo !== 'undefined' ? window.personalInfo.name : '未定义');
+        if (typeof window.personalInfo !== 'undefined') {
             // 更新Hero区域
             const heroTitle = document.querySelector('.hero-title .highlight');
-            if (heroTitle) heroTitle.textContent = personalInfo.name;
+            if (heroTitle) heroTitle.textContent = window.personalInfo.name;
 
             const heroSubtitle = document.querySelector('.hero-subtitle');
-            if (heroSubtitle) heroSubtitle.textContent = personalInfo.title;
+            if (heroSubtitle) heroSubtitle.textContent = window.personalInfo.title;
 
             const heroDescription = document.querySelector('.hero-description');
-            if (heroDescription) heroDescription.textContent = personalInfo.tagline;
+            if (heroDescription) heroDescription.textContent = window.personalInfo.tagline;
 
             // 更新关于我区域
             const aboutName = document.querySelector('.about-text h3');
-            if (aboutName) aboutName.textContent = personalInfo.name;
+            if (aboutName) aboutName.textContent = window.personalInfo.name;
 
             const aboutText = document.querySelector('.about-text p');
-            if (aboutText) aboutText.textContent = personalInfo.aboutText;
+            if (aboutText) aboutText.textContent = window.personalInfo.aboutText;
 
             // 更新详细信息
             const detailItems = document.querySelectorAll('.detail-item span');
             if (detailItems.length >= 3) {
-                detailItems[0].textContent = personalInfo.location;
-                detailItems[1].textContent = personalInfo.currentPosition;
-                detailItems[2].textContent = personalInfo.highestEducation;
+                detailItems[0].textContent = window.personalInfo.location;
+                detailItems[1].textContent = window.personalInfo.currentPosition;
+                detailItems[2].textContent = window.personalInfo.highestEducation;
             }
 
             // 更新统计数据
             const statItems = document.querySelectorAll('.stat-item h4');
-            if (statItems.length >= 3 && personalInfo.stats) {
-                statItems[0].textContent = personalInfo.stats.projectsCompleted;
-                statItems[1].textContent = personalInfo.stats.clientsSatisfied;
-                statItems[2].textContent = personalInfo.stats.yearsExperience;
+            if (statItems.length >= 3 && window.personalInfo.stats) {
+                statItems[0].textContent = window.personalInfo.stats.projectsCompleted;
+                statItems[1].textContent = window.personalInfo.stats.clientsSatisfied;
+                statItems[2].textContent = window.personalInfo.stats.yearsExperience;
             }
 
             // 更新联系方式
             const contactItems = document.querySelectorAll('.contact-item p');
-            if (contactItems.length >= 4 && typeof contactInfo !== 'undefined') {
-                contactItems[0].textContent = contactInfo.email;
-                contactItems[1].textContent = contactInfo.phone;
-                contactItems[2].textContent = contactInfo.github;
-                contactItems[3].textContent = contactInfo.wechat;
+            if (contactItems.length >= 4 && typeof window.contactInfo !== 'undefined') {
+                contactItems[0].textContent = window.contactInfo.email;
+                contactItems[1].textContent = window.contactInfo.phone;
+                contactItems[2].textContent = window.contactInfo.github;
+                contactItems[3].textContent = window.contactInfo.wechat;
             }
 
             // 更新网站标题和页脚
-            document.title = personalInfo.name + " - 个人作品集";
+            document.title = window.personalInfo.name + " - 个人作品集";
             const footerText = document.querySelector('.footer p');
             if (footerText) {
                 const year = new Date().getFullYear();
-                footerText.innerHTML = `&copy; ${year} ${personalInfo.name}. ${siteConfig?.footerText || '保留所有权利'}.`;
+                footerText.innerHTML = `&copy; ${year} ${window.personalInfo.name}. ${window.siteConfig?.footerText || '保留所有权利'}.`;
             }
         }
     } catch (error) {
@@ -223,15 +223,14 @@ function populatePersonalInfo() {
 
 function loadMockData() {
     console.log('loadMockData函数执行');
-    try {
-        console.log('检查skillsData:', typeof window.skillsData !== 'undefined' ? '已定义' : '未定义');
-        console.log('检查experienceData:', typeof window.experienceData !== 'undefined' ? '已定义' : '未定义');
+    console.log('skillsData:', typeof window.skillsData !== 'undefined' ? '已定义' : '未定义');
+    console.log('experienceData:', typeof window.experienceData !== 'undefined' ? '已定义' : '未定义');
 
-        // 首先填充个人信息
-        populatePersonalInfo();
+    // 首先填充个人信息
+    populatePersonalInfo();
 
     // 使用content.js中的数据（如果存在），否则使用模拟数据
-    const skillsDataToUse = typeof skillsData !== 'undefined' ? skillsData : {
+    const skillsDataToUse = typeof window.skillsData !== 'undefined' ? window.skillsData : {
         '技术技能': [
             { name: 'HTML/CSS', level: 90 },
             { name: 'JavaScript', level: 85 },
@@ -251,7 +250,7 @@ function loadMockData() {
         ]
     };
 
-    const experienceDataToUse = typeof experienceData !== 'undefined' ? experienceData : [
+    const experienceDataToUse = typeof window.experienceData !== 'undefined' ? window.experienceData : [
         {
             date: '2022-至今',
             title: '前端开发工程师',
@@ -272,7 +271,7 @@ function loadMockData() {
         }
     ];
 
-    const educationDataToUse = typeof educationData !== 'undefined' ? educationData : [
+    const educationDataToUse = typeof window.educationData !== 'undefined' ? window.educationData : [
         {
             degree: '计算机科学硕士',
             school: '知名大学',
@@ -287,7 +286,7 @@ function loadMockData() {
         }
     ];
 
-    const projectsDataToUse = typeof projectsData !== 'undefined' ? projectsData : [
+    const projectsDataToUse = typeof window.projectsData !== 'undefined' ? window.projectsData : [
         {
             name: '电商平台重构',
             description: '使用React和Node.js重构大型电商平台，提升性能30%',
