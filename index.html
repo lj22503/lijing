@@ -3,209 +3,1138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>黎静 - 金融产品经理作品集</title>
-    <link rel="stylesheet" href="css/style.css">
+
+    <!-- SEO Meta Tags -->
+    <title>黎静 - 资深金融产品经理 | 10年基金产品经验 | AI创新</title>
+    <meta name="description" content="黎静，资深金融产品经理，拥有10年基金产品经验，专注C端产品设计与AI创新应用。擅长数据驱动运营、智能化产品探索和用户增长。" />
+    <meta name="keywords" content="黎静,金融产品经理,基金产品,AI产品经理,财富管理,产品设计,上海,中欧财富" />
+    <meta name="author" content="黎静" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="黎静 - 资深金融产品经理 | 10年基金产品经验" />
+    <meta property="og:description" content="资深金融产品经理，专注C端产品设计与AI创新应用，主导过多款爆款金融产品。" />
+    <meta property="og:site_name" content="黎静的作品集" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="黎静 - 资深金融产品经理 | 10年基金产品经验" />
+    <meta name="twitter:description" content="资深金融产品经理，专注C端产品设计与AI创新应用，主导过多款爆款金融产品。" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="https://api.iconify.design/mdi:account-circle.svg?color=%231E3A5F" />
+
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS for additional styles -->
+    <style>
+        :root {
+            --primary: #1E3A5F;
+            --secondary: #00B8D4;
+            --light-bg: #F5F7FA;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background-color: var(--secondary);
+            border-radius: 2px;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            background-color: rgba(0, 184, 212, 0.3);
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 16px;
+            height: 16px;
+            background-color: var(--secondary);
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+
+        .hover-scale:hover {
+            transform: scale(1.03);
+        }
+
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .line-clamp-2 {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .line-clamp-3 {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        /* Mobile menu animation */
+        .mobile-menu-enter {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        .mobile-menu-enter-active {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.3s, transform 0.3s;
+        }
+
+        .mobile-menu-exit {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .mobile-menu-exit-active {
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.3s, transform 0.3s;
+        }
+
+        /* Smooth fade-in animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+        .delay-4 { animation-delay: 0.4s; }
+        .delay-5 { animation-delay: 0.5s; }
+    </style>
+
+    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons (via CDN) -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 </head>
-<body>
-    <!-- 导航栏 -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="#" class="logo">黎静作品集</a>
-            <ul class="nav-links">
-                <li><a href="#home">首页</a></li>
-                <li><a href="#about">关于我</a></li>
-                <li><a href="#skills">技能</a></li>
-                <li><a href="#experience">工作经验</a></li>
-                <li><a href="#education">教育背景</a></li>
-                <li><a href="#projects">项目作品</a></li>
-                <li><a href="#blog">博客/专栏</a></li>
-                <li><a href="#contact">联系方式</a></li>
-            </ul>
-            <button class="menu-toggle">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
-    </nav>
+<body class="bg-white text-gray-800">
+    <!-- Header/Navigation will be here -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-sm shadow-md" role="banner">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <button id="logo-btn" class="text-2xl font-bold text-[#1E3A5F] hover:text-[#00B8D4] transition-colors" aria-label="返回首页">
+                    黎静
+                </button>
 
-    <!-- 首页/Hero部分 -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">你好，我是<span class="highlight">[你的名字]</span></h1>
-                <p class="hero-subtitle">[你的职业头衔/专业领域]</p>
-                <p class="hero-description">[简短的个人介绍或标语]</p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">查看我的作品</a>
-                    <a href="#contact" class="btn btn-secondary">联系我</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <!-- 头像或代表图像占位符 -->
-                <div class="avatar-placeholder">
-                    <i class="fas fa-user-circle"></i>
-                </div>
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-8" aria-label="主导航">
+                    <button data-section="about" class="nav-btn transition-colors relative group text-gray-700 hover:text-[#1E3A5F]">关于</button>
+                    <button data-section="experience" class="nav-btn transition-colors relative group text-gray-700 hover:text-[#1E3A5F]">经历</button>
+                    <button data-section="portfolio" class="nav-btn transition-colors relative group text-gray-700 hover:text-[#1E3A5F]">作品</button>
+                    <button data-section="articles" class="nav-btn transition-colors relative group text-gray-700 hover:text-[#1E3A5F]">专栏</button>
+                    <button data-section="contact" class="nav-btn transition-colors relative group text-gray-700 hover:text-[#1E3A5F]">联系</button>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-[#1E3A5F] hover:text-[#00B8D4] transition-colors" aria-label="Toggle menu">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
             </div>
         </div>
-    </section>
 
-    <!-- 关于我 -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">关于我</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <h3>[你的名字]</h3>
-                    <p>[详细的个人介绍，包括职业背景、兴趣、价值观等]</p>
-                    <div class="about-details">
-                        <div class="detail-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>[所在地]</span>
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <nav class="px-4 py-4 space-y-2">
+                <button data-section="about" class="mobile-nav-btn block w-full text-left px-4 py-2 rounded-lg transition-colors text-gray-700 hover:bg-[#F5F7FA]">关于</button>
+                <button data-section="experience" class="mobile-nav-btn block w-full text-left px-4 py-2 rounded-lg transition-colors text-gray-700 hover:bg-[#F5F7FA]">经历</button>
+                <button data-section="portfolio" class="mobile-nav-btn block w-full text-left px-4 py-2 rounded-lg transition-colors text-gray-700 hover:bg-[#F5F7FA]">作品</button>
+                <button data-section="articles" class="mobile-nav-btn block w-full text-left px-4 py-2 rounded-lg transition-colors text-gray-700 hover:bg-[#F5F7FA]">专栏</button>
+                <button data-section="contact" class="mobile-nav-btn block w-full text-left px-4 py-2 rounded-lg transition-colors text-gray-700 hover:bg-[#F5F7FA]">联系</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="min-h-screen flex items-center pt-20 bg-gradient-to-br from-[#1E3A5F] via-[#1E3A5F] to-[#2D4A6F] text-white relative overflow-hidden">
+            <!-- Background Pattern -->
+            <div class="absolute inset-0 opacity-10">
+                <div class="absolute top-20 left-10 w-72 h-72 bg-[#00B8D4] rounded-full filter blur-3xl"></div>
+                <div class="absolute bottom-20 right-10 w-96 h-96 bg-[#00B8D4] rounded-full filter blur-3xl"></div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <!-- Left Content -->
+                    <div class="fade-in-up">
+                        <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-6">黎静</h1>
+                        <div class="text-xl md:text-2xl mb-6 text-[#00B8D4] font-medium">
+                            资深金融产品经理 | 10 年基金产品经验 | 专注 C 端与金融 AI
                         </div>
-                        <div class="detail-item">
-                            <i class="fas fa-briefcase"></i>
-                            <span>[当前职位]</span>
-                        </div>
-                        <div class="detail-item">
-                            <i class="fas fa-graduation-cap"></i>
-                            <span>[最高学历]</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-stats">
-                    <div class="stat-item">
-                        <h4>[数字]+</h4>
-                        <p>项目完成</p>
-                    </div>
-                    <div class="stat-item">
-                        <h4>[数字]+</h4>
-                        <p>客户满意</p>
-                    </div>
-                    <div class="stat-item">
-                        <h4>[数字]+</h4>
-                        <p>工作经验(年)</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 技能 -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">专业技能</h2>
-            <div class="skills-grid">
-                <!-- 技能项将通过JavaScript动态生成 -->
-            </div>
-        </div>
-    </section>
-
-    <!-- 工作经验 -->
-    <section id="experience" class="experience">
-        <div class="container">
-            <h2 class="section-title">工作经验</h2>
-            <div class="timeline">
-                <!-- 工作经验项将通过JavaScript动态生成 -->
-            </div>
-        </div>
-    </section>
-
-    <!-- 教育背景 -->
-    <section id="education" class="education">
-        <div class="container">
-            <h2 class="section-title">教育背景</h2>
-            <div class="education-grid">
-                <!-- 教育项将通过JavaScript动态生成 -->
-            </div>
-        </div>
-    </section>
-
-    <!-- 项目作品 -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">项目作品</h2>
-            <div class="projects-grid">
-                <!-- 项目项将通过JavaScript动态生成 -->
-            </div>
-        </div>
-    </section>
-
-    <!-- 博客/专栏 -->
-    <section id="blog" class="blog">
-        <div class="container">
-            <h2 class="section-title">博客/专栏</h2>
-            <div class="blog-grid">
-                <!-- 博客项将通过JavaScript动态生成 -->
-            </div>
-        </div>
-    </section>
-
-    <!-- 联系方式 -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">联系方式</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h3>邮箱</h3>
-                            <p>[你的邮箱地址]</p>
+                        <p class="text-lg mb-8 text-gray-200 leading-relaxed max-w-2xl">
+                            精通基金理财、投顾服务、资产配置，主导过基金诊断、资产规划等多款投研驱动产品落地。
+                            拥有从工具到场景、从功能到增长的全链路产品设计与运营能力。
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="#contact" class="inline-flex items-center gap-2 px-6 py-3 bg-[#00B8D4] text-white rounded-lg hover:bg-[#00A5C0] transition-colors shadow-lg hover:shadow-xl">
+                                <i class="fas fa-envelope"></i>
+                                联系我
+                            </a>
+                            <a href="#portfolio" class="inline-flex items-center gap-2 px-6 py-3 glass-effect text-white rounded-lg hover:bg-white/20 transition-colors">
+                                <i class="fas fa-briefcase"></i>
+                                查看作品
+                            </a>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h3>电话</h3>
-                            <p>[你的电话号码]</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fab fa-github"></i>
-                        <div>
-                            <h3>GitHub</h3>
-                            <p>[你的GitHub用户名]</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fab fa-weixin"></i>
-                        <div>
-                            <h3>微信</h3>
-                            <p>[你的微信号]</p>
+
+                    <!-- Right Image -->
+                    <div class="flex justify-center lg:justify-end fade-in-up delay-1">
+                        <div class="relative">
+                            <div class="absolute inset-0 bg-[#00B8D4] rounded-full filter blur-2xl opacity-30 animate-pulse"></div>
+                            <img src="https://images.unsplash.com/photo-1665224752136-4dbe2dfc8195?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBhc2lhbiUyMGJ1c2luZXNzd29tYW4lMjBmaW5hbmNlfGVufDF8fHx8MTc3MzU1MDgxMXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="黎静 - 资深金融产品经理" class="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full object-cover border-4 border-white/20 shadow-2xl" loading="eager" />
                         </div>
                     </div>
                 </div>
-                <div class="contact-form">
-                    <h3>发送消息</h3>
-                    <form id="messageForm">
-                        <input type="text" placeholder="你的名字" required>
-                        <input type="email" placeholder="你的邮箱" required>
-                        <input type="text" placeholder="主题" required>
-                        <textarea placeholder="你的消息" rows="5" required></textarea>
-                        <button type="submit" class="btn btn-primary">发送消息</button>
-                    </form>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 fade-in-up delay-2">
+                <div class="w-6 h-10 border-2 border-white/30 rounded-full flex items-start justify-center p-2">
+                    <div class="w-1 h-2 bg-white rounded-full animate-bounce"></div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- 页脚 -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; <span id="currentYear"></span> [你的名字]. 保留所有权利.</p>
-            <div class="footer-links">
-                <a href="#home">首页</a>
-                <a href="#about">关于</a>
-                <a href="#projects">项目</a>
-                <a href="#contact">联系</a>
+        <!-- About Section -->
+        <section id="about" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold text-[#1E3A5F] mb-4">关于我</h2>
+                    <div class="w-20 h-1 bg-[#00B8D4] mx-auto"></div>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-12 mb-16">
+                    <!-- Left - Bio -->
+                    <div class="bg-[#F5F7FA] rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow fade-in-up">
+                        <h3 class="text-2xl font-bold text-[#1E3A5F] mb-6">个人简介</h3>
+                        <p class="text-gray-700 leading-relaxed text-lg">
+                            拥有 <span class="text-[#00B8D4] font-semibold">10 年基金产品经验</span>，
+                            具备从工具到场景、从功能到增长的全链路产品设计与运营能力。
+                        </p>
+                        <p class="text-gray-700 leading-relaxed text-lg mt-4">
+                            擅长通过数据监控、精准运营和体验优化驱动产品增长，主导过 APP 重大版本转型。
+                            致力于用 AI 技术赋能金融产品创新，探索智能化财富管理的未来。
+                        </p>
+                    </div>
+
+                    <!-- Right - Skills -->
+                    <div class="fade-in-up delay-1">
+                        <h3 class="text-2xl font-bold text-[#1E3A5F] mb-6">核心能力</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-3 bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow group">
+                                <div class="flex-shrink-0 w-10 h-10 bg-[#00B8D4]/10 rounded-lg flex items-center justify-center group-hover:bg-[#00B8D4]/20 transition-colors">
+                                    <i class="fas fa-brain text-[#00B8D4] text-lg"></i>
+                                </div>
+                                <p class="text-gray-700 pt-1">AI 技术应用：Prompt 工程、AI Agent、RAG 知识库、Coze 实战</p>
+                            </div>
+                            <div class="flex items-start gap-3 bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow group">
+                                <div class="flex-shrink-0 w-10 h-10 bg-[#00B8D4]/10 rounded-lg flex items-center justify-center group-hover:bg-[#00B8D4]/20 transition-colors">
+                                    <i class="fas fa-database text-[#00B8D4] text-lg"></i>
+                                </div>
+                                <p class="text-gray-700 pt-1">数据分析：SQL、Python、Tableau、GIO 埋点、A/B 测试</p>
+                            </div>
+                            <div class="flex items-start gap-3 bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow group">
+                                <div class="flex-shrink-0 w-10 h-10 bg-[#00B8D4]/10 rounded-lg flex items-center justify-center group-hover:bg-[#00B8D4]/20 transition-colors">
+                                    <i class="fas fa-palette text-[#00B8D4] text-lg"></i>
+                                </div>
+                                <p class="text-gray-700 pt-1">产品工具：Axure、Figma、Jira、Confluence</p>
+                            </div>
+                            <div class="flex items-start gap-3 bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow group">
+                                <div class="flex-shrink-0 w-10 h-10 bg-[#00B8D4]/10 rounded-lg flex items-center justify-center group-hover:bg-[#00B8D4]/20 transition-colors">
+                                    <i class="fas fa-award text-[#00B8D4] text-lg"></i>
+                                </div>
+                                <p class="text-gray-700 pt-1">专业资质：基金/证券从业资格证、AFP 金融理财师</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stats -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="bg-gradient-to-br from-[#1E3A5F] to-[#2D4A6F] rounded-xl p-6 text-white text-center hover-scale">
+                        <div class="flex justify-center mb-3">
+                            <div class="w-12 h-12 bg-[#00B8D4]/20 rounded-full flex items-center justify-center">
+                                <i class="fas fa-chart-line text-[#00B8D4] text-2xl"></i>
+                            </div>
+                        </div>
+                        <div class="text-3xl font-bold mb-1">10 年</div>
+                        <div class="text-gray-300 text-sm">产品经验</div>
+                    </div>
+                    <div class="bg-gradient-to-br from-[#1E3A5F] to-[#2D4A6F] rounded-xl p-6 text-white text-center hover-scale">
+                        <div class="flex justify-center mb-3">
+                            <div class="w-12 h-12 bg-[#00B8D4]/20 rounded-full flex items-center justify-center">
+                                <i class="fas fa-bolt text-[#00B8D4] text-2xl"></i>
+                            </div>
+                        </div>
+                        <div class="text-3xl font-bold mb-1">3 款</div>
+                        <div class="text-gray-300 text-sm">爆款产品</div>
+                    </div>
+                    <div class="bg-gradient-to-br from-[#1E3A5F] to-[#2D4A6F] rounded-xl p-6 text-white text-center hover-scale">
+                        <div class="flex justify-center mb-3">
+                            <div class="w-12 h-12 bg-[#00B8D4]/20 rounded-full flex items-center justify-center">
+                                <i class="fas fa-users text-[#00B8D4] text-2xl"></i>
+                            </div>
+                        </div>
+                        <div class="text-3xl font-bold mb-1">5.9 万+</div>
+                        <div class="text-gray-300 text-sm">工具使用</div>
+                    </div>
+                    <div class="bg-gradient-to-br from-[#1E3A5F] to-[#2D4A6F] rounded-xl p-6 text-white text-center hover-scale">
+                        <div class="flex justify-center mb-3">
+                            <div class="w-12 h-12 bg-[#00B8D4]/20 rounded-full flex items-center justify-center">
+                                <i class="fas fa-bullseye text-[#00B8D4] text-2xl"></i>
+                            </div>
+                        </div>
+                        <div class="text-3xl font-bold mb-1">36%</div>
+                        <div class="text-gray-300 text-sm">转化率</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-20 bg-[#F5F7FA]">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold text-[#1E3A5F] mb-4">职业经历</h2>
+                    <div class="w-20 h-1 bg-[#00B8D4] mx-auto"></div>
+                </div>
+
+                <div class="relative">
+                    <!-- Timeline Line -->
+                    <div class="hidden md:block timeline-line h-full"></div>
+
+                    <div class="space-y-12">
+                        <!-- Experience 1 -->
+                        <div class="relative grid md:grid-cols-2 gap-8 items-center">
+                            <div class="hidden md:block timeline-dot"></div>
+                            <div class="md:text-right md:pr-12">
+                                <div class="bg-white rounded-2xl p-6 md:p-8 shadow-md hover:shadow-xl transition-shadow fade-in-up">
+                                    <div class="flex items-start gap-3 mb-4">
+                                        <div class="flex-shrink-0 w-12 h-12 bg-[#1E3A5F] rounded-lg flex items-center justify-center">
+                                            <i class="fas fa-briefcase text-[#00B8D4] text-xl"></i>
+                                        </div>
+                                        <div class="flex-1">
+                                            <h3 class="text-xl font-bold text-[#1E3A5F] mb-1">上海中欧财富基金销售有限公司</h3>
+                                            <div class="text-[#00B8D4] font-semibold mb-1">资深产品经理</div>
+                                            <div class="text-gray-600 text-sm flex items-center gap-2">
+                                                <span>2018.05 - 至今</span>
+                                                <span>•</span>
+                                                <span>上海</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="space-y-3 mt-6">
+                                        <div class="flex items-start gap-2 text-gray-700">
+                                            <i class="fas fa-check-circle text-[#00B8D4] mt-0.5"></i>
+                                            <span class="text-sm leading-relaxed">C 端产品与用户增长：非货定投客户数年增长超 40%，组合保有量年增长达 7 倍</span>
+                                        </div>
+                                        <div class="flex items-start gap-2 text-gray-700">
+                                            <i class="fas fa-check-circle text-[#00B8D4] mt-0.5"></i>
+                                            <span class="text-sm leading-relaxed">智能化产品探索：基金诊断工具全年使用超 5.9 万人次，资产诊断转化率 36%</span>
+                                        </div>
+                                        <div class="flex items-start gap-2 text-gray-700">
+                                            <i class="fas fa-check-circle text-[#00B8D4] mt-0.5"></i>
+                                            <span class="text-sm leading-relaxed">数据驱动运营：设计超 35 项精准运营策略，转化贡献同比增长 4.7 倍</span>
+                                        </div>
+                                        <div class="flex items-start gap-2 text-gray-700">
+                                            <i class="fas fa-check-circle text-[#00B8D4] mt-0.5"></i>
+                                            <span class="text-sm leading-relaxed">APP 体验升级：主导 APP 4.0 转型，访问时长提升 8%，点击率上升 11%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="md:col-start-2 md:pl-12"></div>
+                        </div>
+
+                        <!-- Experience 2 -->
+                        <div class="relative grid md:grid-cols-2 gap-8 items-center">
+                            <div class="hidden md:block timeline-dot"></div>
+                            <div class="md:col-start-2 md:pl-12">
+                                <div class="bg-white rounded-2xl p-6 md:p-8 shadow-md hover:shadow-xl transition-shadow fade-in-up delay-1">
+                                    <div class="flex items-start gap-3 mb-4">
+                                        <div class="flex-shrink-0 w-12 h-12 bg-[#1E3A5F] rounded-lg flex items-center justify-center">
+                                            <i class="fas fa-briefcase text-[#00B8D4] text-xl"></i>
+                                        </div>
+                                        <div class="flex-1">
+                                            <h3 class="text-xl font-bold text-[#1E3A5F] mb-1">证通股份有限公司</h3>
+                                            <div class="text-[#00B8D4] font-semibold mb-1">产品经理</div>
+                                            <div class="text-gray-600 text-sm flex items-center gap-2">
+                                                <span>2015.06 - 2018.05</span>
+                                                <span>•</span>
+                                                <span>深圳</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="space-y-3 mt-6">
+                                        <div class="flex items-start gap-2 text-gray-700">
+                                            <i class="fas fa-check-circle text-[#00B8D4] mt-0.5"></i>
+                                            <span class="text-sm leading-relaxed">金融产品系统优化：运营效率提升 40%，银行接入周期缩短 60%</span>
+                                        </div>
+                                        <div class="flex items-start gap-2 text-gray-700">
+                                            <i class="fas fa-check-circle text-[#00B8D4] mt-0.5"></i>
+                                            <span class="text-sm leading-relaxed">营销工具闭环：活期产品用户规模增长 100%，人均 AUM 达 10 万元</span>
+                                        </div>
+                                        <div class="flex items-start gap-2 text-gray-700">
+                                            <i class="fas fa-check-circle text-[#00B8D4] mt-0.5"></i>
+                                            <span class="text-sm leading-relaxed">跨部门协作：推动产品、技术、运营团队高效协同，确保项目按时交付</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold text-[#1E3A5F] mb-4">作品集</h2>
+                    <div class="w-20 h-1 bg-[#00B8D4] mx-auto"></div>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project 1 -->
+                    <div class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 border border-gray-100 hover-scale fade-in-up">
+                        <div class="relative h-48 overflow-hidden bg-gradient-to-br from-[#1E3A5F] to-[#2D4A6F]">
+                            <img src="https://images.unsplash.com/photo-1759661966728-4a02e3c6ed91?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmaW5hbmNpYWwlMjB0ZWNobm9sb2d5JTIwZGFzaGJvYXJkJTIwYW5hbHl0aWNzfGVufDF8fHx8MTc3MzU1MDgxMnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="基金诊断与资产诊断服务" class="w-full h-full object-cover opacity-60 group-hover:opacity-80 group-hover:scale-110 transition-all duration-300" />
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="w-16 h-16 bg-[#00B8D4] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-chart-line text-white text-2xl"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-[#1E3A5F] mb-2 group-hover:text-[#00B8D4] transition-colors">基金诊断与资产诊断服务</h3>
+                            <div class="text-sm text-gray-600 mb-3">
+                                <span>2022-2023</span>
+                                <span class="mx-2">•</span>
+                                <span class="text-[#00B8D4]">产品负责人</span>
+                            </div>
+                            <p class="text-sm text-gray-700 leading-relaxed mb-4">使用量 5.9 万+，转化率 36%，赋能理财师挖掘外部资产 20 亿+</p>
+                            <button class="inline-flex items-center gap-2 text-[#00B8D4] hover:text-[#1E3A5F] transition-colors text-sm font-medium group/btn">
+                                查看详情
+                                <i class="fas fa-external-link-alt group-hover/btn:translate-x-1 transition-transform"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 border border-gray-100 hover-scale fade-in-up delay-1">
+                        <div class="relative h-48 overflow-hidden bg-gradient-to-br from-[#1E3A5F] to-[#2D4A6F]">
+                            <img src="https://images.unsplash.com/photo-1768055105681-7d2096c5165f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbnZlc3RtZW50JTIwcG9ydGZvbGlvJTIwZGF0YSUyMHZpc3VhbGl6YXRpb258ZW58MXx8fHwxNzczNTUwODEzfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="智能定投与全生命周期运营体系" class="w-full h-full object-cover opacity-60 group-hover:opacity-80 group-hover:scale-110 transition-all duration-300" />
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="w-16 h-16 bg-[#00B8D4] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-bullseye text-white text-2xl"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-[#1E3A5F] mb-2 group-hover:text-[#00B8D4] transition-colors">智能定投与全生命周期运营体系</h3>
+                            <div class="text-sm text-gray-600 mb-3">
+                                <span>2020-2022</span>
+                                <span class="mx-2">•</span>
+                                <span class="text-[#00B8D4]">产品负责人</span>
+                            </div>
+                            <p class="text-sm text-gray-700 leading-relaxed mb-4">定投金额占比 14%，定投人数占比 45%，留存率显著提升</p>
+                            <button class="inline-flex items-center gap-2 text-[#00B8D4] hover:text-[#1E3A5F] transition-colors text-sm font-medium group/btn">
+                                查看详情
+                                <i class="fas fa-external-link-alt group-hover/btn:translate-x-1 transition-transform"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 border border-gray-100 hover-scale fade-in-up delay-2">
+                        <div class="relative h-48 overflow-hidden bg-gradient-to-br from-[#1E3A5F] to-[#2D4A6F]">
+                            <img src="https://images.unsplash.com/photo-1764231467896-73f0ef4438aa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBmaW5hbmNpYWwlMjBwbGFubmluZ3xlbnwxfHx8fDE3NzM1NTA4MTN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="中欧财富 APP 4.0「投+顾」模式转型" class="w-full h-full object-cover opacity-60 group-hover:opacity-80 group-hover:scale-110 transition-all duration-300" />
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="w-16 h-16 bg-[#00B8D4] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-mobile-alt text-white text-2xl"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-[#1E3A5F] mb-2 group-hover:text-[#00B8D4] transition-colors">中欧财富 APP 4.0「投+顾」模式转型</h3>
+                            <div class="text-sm text-gray-600 mb-3">
+                                <span>2021</span>
+                                <span class="mx-2">•</span>
+                                <span class="text-[#00B8D4]">核心产品负责人</span>
+                            </div>
+                            <p class="text-sm text-gray-700 leading-relaxed mb-4">访问时长提升 8%，点击率上升 11%</p>
+                            <button class="inline-flex items-center gap-2 text-[#00B8D4] hover:text-[#1E3A5F] transition-colors text-sm font-medium group/btn">
+                                查看详情
+                                <i class="fas fa-external-link-alt group-hover/btn:translate-x-1 transition-transform"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 border border-gray-100 hover-scale fade-in-up">
+                        <div class="relative h-48 overflow-hidden bg-gradient-to-br from-[#1E3A5F] to-[#2D4A6F]">
+                            <img src="https://images.unsplash.com/photo-1526378800651-c32d170fe6f8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlJTIwZmludGVjaHxlbnwxfHx8fDE3NzM1NTA4MTN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="基金合规审查 AI 助手" class="w-full h-full object-cover opacity-60 group-hover:opacity-80 group-hover:scale-110 transition-all duration-300" />
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="w-16 h-16 bg-[#00B8D4] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-brain text-white text-2xl"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-[#1E3A5F] mb-2 group-hover:text-[#00B8D4] transition-colors">基金合规审查 AI 助手</h3>
+                            <div class="text-sm text-gray-600 mb-3">
+                                <span>2024</span>
+                                <span class="mx-2">•</span>
+                                <span class="text-[#00B8D4]">产品负责人</span>
+                            </div>
+                            <p class="text-sm text-gray-700 leading-relaxed mb-4">验证 AI 在合规审查场景的产品化路径</p>
+                            <button class="inline-flex items-center gap-2 text-[#00B8D4] hover:text-[#1E3A5F] transition-colors text-sm font-medium group/btn">
+                                查看详情
+                                <i class="fas fa-external-link-alt group-hover/btn:translate-x-1 transition-transform"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 border border-gray-100 hover-scale fade-in-up delay-1">
+                        <div class="relative h-48 overflow-hidden bg-gradient-to-br from-[#1E3A5F] to-[#2D4A6F]">
+                            <img src="https://images.unsplash.com/photo-1764231467896-73f0ef4438aa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyZXRpcmVtZW50JTIwcGxhbm5pbmclMjBjYWxjdWxhdG9yfGVufDF8fHx8MTc3MzU1MDgxNHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="退休规划 AI 工具（FIRE 燃料罐）" class="w-full h-full object-cover opacity-60 group-hover:opacity-80 group-hover:scale-110 transition-all duration-300" />
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="w-16 h-16 bg-[#00B8D4] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-piggy-bank text-white text-2xl"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-[#1E3A5F] mb-2 group-hover:text-[#00B8D4] transition-colors">退休规划 AI 工具（FIRE 燃料罐）</h3>
+                            <div class="text-sm text-gray-600 mb-3">
+                                <span>2024</span>
+                                <span class="mx-2">•</span>
+                                <span class="text-[#00B8D4]">产品负责人</span>
+                            </div>
+                            <p class="text-sm text-gray-700 leading-relaxed mb-4">基于 4% 法则的动态路径模拟工具</p>
+                            <button class="inline-flex items-center gap-2 text-[#00B8D4] hover:text-[#1E3A5F] transition-colors text-sm font-medium group/btn">
+                                查看详情
+                                <i class="fas fa-external-link-alt group-hover/btn:translate-x-1 transition-transform"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Project 6 -->
+                    <div class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 border border-gray-100 hover-scale fade-in-up delay-2">
+                        <div class="relative h-48 overflow-hidden bg-gradient-to-br from-[#1E3A5F] to-[#2D4A6F]">
+                            <img src="https://images.unsplash.com/photo-1768055105681-7d2096c5165f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbnZlc3RtZW50JTIwcG9ydGZvbGlvJTIwZGF0YSUyMHZpc3VhbGl6YXRpb258ZW58MXx8fHwxNzczNTUwODEzfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="家庭财务健康诊断 AI 助手" class="w-full h-full object-cover opacity-60 group-hover:opacity-80 group-hover:scale-110 transition-all duration-300" />
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="w-16 h-16 bg-[#00B8D4] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-heart text-white text-2xl"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-[#1E3A5F] mb-2 group-hover:text-[#00B8D4] transition-colors">家庭财务健康诊断 AI 助手</h3>
+                            <div class="text-sm text-gray-600 mb-3">
+                                <span>2024</span>
+                                <span class="mx-2">•</span>
+                                <span class="text-[#00B8D4]">产品负责人</span>
+                            </div>
+                            <p class="text-sm text-gray-700 leading-relaxed mb-4">已在豆包、Coze 等平台上线</p>
+                            <button class="inline-flex items-center gap-2 text-[#00B8D4] hover:text-[#1E3A5F] transition-colors text-sm font-medium group/btn">
+                                查看详情
+                                <i class="fas fa-external-link-alt group-hover/btn:translate-x-1 transition-transform"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Articles Section -->
+        <section id="articles" class="py-20 bg-[#F5F7FA]">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl md:text-5xl font-bold text-[#1E3A5F] mb-4">专栏文章</h2>
+                    <div class="w-20 h-1 bg-[#00B8D4] mx-auto mb-4"></div>
+                    <p class="text-gray-600 text-lg">公众号：最优解人生</p>
+                </div>
+
+                <!-- Category Tabs -->
+                <div class="flex flex-wrap justify-center gap-3 mb-12" id="category-tabs">
+                    <button class="category-tab px-6 py-2 rounded-full transition-all bg-[#00B8D4] text-white shadow-lg scale-105" data-category="全部">全部</button>
+                    <button class="category-tab px-6 py-2 rounded-full transition-all bg-white text-gray-700 hover:bg-gray-100" data-category="AI+ 财富管理">AI+ 财富管理</button>
+                    <button class="category-tab px-6 py-2 rounded-full transition-all bg-white text-gray-700 hover:bg-gray-100" data-category="产品方法论">产品方法论</button>
+                    <button class="category-tab px-6 py-2 rounded-full transition-all bg-white text-gray-700 hover:bg-gray-100" data-category="理财 100">理财 100</button>
+                    <button class="category-tab px-6 py-2 rounded-full transition-all bg-white text-gray-700 hover:bg-gray-100" data-category="agent100">agent100</button>
+                    <button class="category-tab px-6 py-2 rounded-full transition-all bg-white text-gray-700 hover:bg-gray-100" data-category="AI 思考">AI 思考</button>
+                </div>
+
+                <!-- Articles Grid -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="articles-grid">
+                    <!-- Articles will be dynamically filtered by JavaScript -->
+                    <!-- Template article (hidden) -->
+                    <article class="article-template hidden bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
+                        <div class="p-6">
+                            <!-- Header -->
+                            <div class="flex items-start justify-between mb-4">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-10 h-10 bg-[#1E3A5F] rounded-lg flex items-center justify-center group-hover:bg-[#00B8D4] transition-colors">
+                                        <i class="fas fa-book-open text-white"></i>
+                                    </div>
+                                    <span class="article-category inline-flex items-center gap-1 px-3 py-1 bg-[#00B8D4]/10 text-[#00B8D4] rounded-full text-xs font-medium">
+                                        <i class="fas fa-tag text-xs"></i>
+                                        <span class="category-text">AI+ 财富管理</span>
+                                    </span>
+                                </div>
+                                <span class="paid-badge hidden px-2 py-1 bg-amber-100 text-amber-700 rounded text-xs font-medium">付费</span>
+                            </div>
+
+                            <!-- Title -->
+                            <h3 class="article-title text-lg font-bold text-[#1E3A5F] mb-3 group-hover:text-[#00B8D4] transition-colors line-clamp-2">文章标题</h3>
+
+                            <!-- Summary -->
+                            <p class="article-summary text-sm text-gray-600 leading-relaxed mb-4 line-clamp-3">文章摘要</p>
+
+                            <!-- Footer -->
+                            <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+                                <div class="flex items-center gap-2 text-gray-500 text-xs">
+                                    <i class="fas fa-calendar"></i>
+                                    <span class="article-date">2024-01</span>
+                                </div>
+                                <a href="#" class="article-link inline-flex items-center gap-1 text-[#00B8D4] hover:text-[#1E3A5F] transition-colors text-sm font-medium group/link">
+                                    阅读
+                                    <i class="fas fa-external-link-alt group-hover/link:translate-x-1 transition-transform text-xs"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Actual articles inserted by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold text-[#1E3A5F] mb-4">联系我</h2>
+                    <div class="w-20 h-1 bg-[#00B8D4] mx-auto mb-6"></div>
+                    <p class="text-xl text-gray-600">欢迎交流合作机会</p>
+                </div>
+
+                <!-- Contact Methods -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                    <!-- Email -->
+                    <a href="mailto:lj22503@163.com" target="_blank" rel="noopener noreferrer" class="block bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300 group border border-gray-100 hover:border-[#00B8D4] fade-in-up">
+                        <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-envelope text-white text-2xl"></i>
+                        </div>
+                        <div class="text-sm text-gray-600 mb-1">邮箱</div>
+                        <div class="font-medium text-[#1E3A5F] group-hover:text-[#00B8D4] transition-colors break-all">lj22503@163.com</div>
+                    </a>
+
+                    <!-- WeChat -->
+                    <button id="wechat-btn" class="w-full text-left bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300 group border border-gray-100 hover:border-[#00B8D4] fade-in-up delay-1">
+                        <div class="w-14 h-14 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fab fa-weixin text-white text-2xl"></i>
+                        </div>
+                        <div class="text-sm text-gray-600 mb-1">微信</div>
+                        <div class="font-medium text-[#1E3A5F] group-hover:text-[#00B8D4] transition-colors break-all">lj22503</div>
+                    </button>
+
+                    <!-- GitHub -->
+                    <a href="https://github.com/lj22503" target="_blank" rel="noopener noreferrer" class="block bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300 group border border-gray-100 hover:border-[#00B8D4] fade-in-up delay-2">
+                        <div class="w-14 h-14 bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fab fa-github text-white text-2xl"></i>
+                        </div>
+                        <div class="text-sm text-gray-600 mb-1">GitHub</div>
+                        <div class="font-medium text-[#1E3A5F] group-hover:text-[#00B8D4] transition-colors break-all">github.com/lj22503</div>
+                    </a>
+
+                    <!-- Phone -->
+                    <a href="tel:17602189728" class="block bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300 group border border-gray-100 hover:border-[#00B8D4] fade-in-up delay-3">
+                        <div class="w-14 h-14 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-phone text-white text-2xl"></i>
+                        </div>
+                        <div class="text-sm text-gray-600 mb-1">电话</div>
+                        <div class="font-medium text-[#1E3A5F] group-hover:text-[#00B8D4] transition-colors break-all">17602189728</div>
+                    </a>
+                </div>
+
+                <!-- Official Account -->
+                <div class="bg-gradient-to-br from-[#1E3A5F] to-[#2D4A6F] rounded-3xl p-8 md:p-12 text-white text-center fade-in-up">
+                    <div class="flex items-center justify-center gap-3 mb-6">
+                        <i class="fas fa-comment-dots text-[#00B8D4] text-3xl"></i>
+                        <h3 class="text-2xl md:text-3xl font-bold">公众号：最优解人生</h3>
+                    </div>
+                    <p class="text-gray-300 mb-8 max-w-2xl mx-auto">
+                        分享金融 AI 产品思考、理财知识和个人成长心得，与您一起探索最优解人生
+                    </p>
+                    <button id="official-qr-btn" class="inline-flex items-center gap-2 px-8 py-3 bg-[#00B8D4] text-white rounded-lg hover:bg-[#00A5C0] transition-colors shadow-lg hover:shadow-xl">
+                        <i class="fas fa-qrcode"></i>
+                        显示二维码
+                    </button>
+                    <div id="official-qr-container" class="hidden mt-8 inline-block bg-white p-4 rounded-xl">
+                        <div class="w-48 h-48 bg-gray-200 rounded-lg flex items-center justify-center text-gray-500">
+                            公众号二维码
+                        </div>
+                    </div>
+                </div>
+
+                <!-- WeChat QR Modal -->
+                <div id="wechat-modal" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+                    <div class="bg-white rounded-2xl p-8 max-w-sm">
+                        <h4 class="text-xl font-bold text-[#1E3A5F] mb-4 text-center">微信二维码</h4>
+                        <div class="w-64 h-64 bg-gray-200 rounded-lg flex items-center justify-center text-gray-500 mb-4">
+                            微信二维码
+                        </div>
+                        <p class="text-center text-gray-600">微信号：lj22503</p>
+                        <button id="close-wechat-modal" class="mt-6 w-full py-2 bg-[#00B8D4] text-white rounded-lg hover:bg-[#00A5C0] transition-colors">关闭</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#1E3A5F] text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Top Section -->
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <!-- Brand -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">黎静</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        资深金融产品经理，专注于 C 端产品设计与 AI 创新应用。
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-semibold mb-4 text-[#00B8D4]">快速链接</h4>
+                    <ul class="space-y-2">
+                        <li><button class="footer-nav-btn text-gray-300 hover:text-[#00B8D4] transition-colors" data-section="about">关于</button></li>
+                        <li><button class="footer-nav-btn text-gray-300 hover:text-[#00B8D4] transition-colors" data-section="experience">经历</button></li>
+                        <li><button class="footer-nav-btn text-gray-300 hover:text-[#00B8D4] transition-colors" data-section="portfolio">作品</button></li>
+                        <li><button class="footer-nav-btn text-gray-300 hover:text-[#00B8D4] transition-colors" data-section="articles">专栏</button></li>
+                        <li><button class="footer-nav-btn text-gray-300 hover:text-[#00B8D4] transition-colors" data-section="contact">联系</button></li>
+                    </ul>
+                </div>
+
+                <!-- Social -->
+                <div>
+                    <h4 class="font-semibold mb-4 text-[#00B8D4]">关注我</h4>
+                    <div class="flex gap-4">
+                        <a href="https://github.com/lj22503" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-[#00B8D4] transition-colors" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <button id="footer-wechat-btn" class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-[#00B8D4] transition-colors" aria-label="微信公众号">
+                            <i class="fab fa-weixin"></i>
+                        </button>
+                    </div>
+                    <p class="text-sm text-gray-300 mt-4">公众号：最优解人生</p>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="border-t border-white/10 my-8"></div>
+
+            <!-- Bottom Section -->
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-300">
+                <div>© <span id="current-year"></span> 黎静。All rights reserved.</div>
+                <div class="flex items-center gap-2">
+                    Built with <i class="fas fa-heart text-red-400"></i> on GitHub Pages
+                    <span class="mx-2">|</span>
+                    <span>沪 ICP 备 XXXXXXXX 号</span>
+                </div>
             </div>
         </div>
     </footer>
 
-    <script src="js/content.js"></script>
-    <script src="js/main.js"></script>
+    <!-- JavaScript -->
+    <script>
+        // Initialize Lucide icons (if needed)
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
+
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Navigation functionality
+        const navButtons = document.querySelectorAll('.nav-btn, .mobile-nav-btn, .footer-nav-btn');
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const logoBtn = document.getElementById('logo-btn');
+
+        // Scroll to section function
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                const offset = 80;
+                const elementPosition = element.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - offset;
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+            // Close mobile menu if open
+            mobileMenu.classList.add('hidden');
+        }
+
+        // Attach event listeners to all navigation buttons
+        navButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const section = button.getAttribute('data-section');
+                if (section) {
+                    scrollToSection(section);
+                }
+            });
+        });
+
+        // Logo button scrolls to hero
+        if (logoBtn) {
+            logoBtn.addEventListener('click', () => scrollToSection('hero'));
+        }
+
+        // Mobile menu toggle
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                // Toggle icon
+                const icon = mobileMenuBtn.querySelector('i');
+                if (icon) {
+                    if (mobileMenu.classList.contains('hidden')) {
+                        icon.className = 'fas fa-bars text-2xl';
+                    } else {
+                        icon.className = 'fas fa-times text-2xl';
+                    }
+                }
+            });
+        }
+
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-md');
+                header.classList.remove('bg-white/95', 'backdrop-blur-sm');
+                header.classList.add('bg-white');
+            } else {
+                header.classList.remove('shadow-md');
+                header.classList.add('bg-white/95', 'backdrop-blur-sm');
+                header.classList.remove('bg-white');
+            }
+        });
+
+        // Active section detection
+        const sections = ['hero', 'about', 'experience', 'portfolio', 'articles', 'contact'];
+        const navLinks = document.querySelectorAll('.nav-btn');
+
+        function setActiveSection() {
+            let current = '';
+            sections.forEach(section => {
+                const element = document.getElementById(section);
+                if (element) {
+                    const rect = element.getBoundingClientRect();
+                    if (rect.top <= 100 && rect.bottom >= 100) {
+                        current = section;
+                    }
+                }
+            });
+
+            // Update active nav link
+            navLinks.forEach(link => {
+                const linkSection = link.getAttribute('data-section');
+                if (linkSection === current) {
+                    link.classList.add('text-[#00B8D4]', 'font-medium');
+                    link.classList.remove('text-gray-700', 'hover:text-[#1E3A5F]');
+                } else {
+                    link.classList.remove('text-[#00B8D4]', 'font-medium');
+                    link.classList.add('text-gray-700', 'hover:text-[#1E3A5F]');
+                }
+            });
+        }
+
+        // Throttle scroll event for performance
+        let scrollTimeout;
+        window.addEventListener('scroll', () => {
+            if (scrollTimeout) {
+                clearTimeout(scrollTimeout);
+            }
+            scrollTimeout = setTimeout(setActiveSection, 100);
+        });
+
+        // Articles filtering functionality
+        const categoryTabs = document.querySelectorAll('.category-tab');
+        const articlesGrid = document.getElementById('articles-grid');
+        const articleTemplate = document.querySelector('.article-template');
+
+        // Articles data (from React component)
+        const articlesData = [
+            {
+                title: '从规则推品到智能推品，AI 怎么做？',
+                category: 'AI+ 财富管理',
+                summary: '探讨如何利用 AI 技术实现从传统规则引擎到智能推荐系统的转变，提升基金产品推荐的精准度和个性化水平。',
+                date: '2024-02',
+                link: '#',
+                isPaid: false
+            },
+            {
+                title: 'AI+ 产品经理提示词攻略（金融/基金行业适用）',
+                category: 'AI+ 财富管理',
+                summary: '分享金融产品经理如何编写高效的 AI Prompt，涵盖需求分析、用户研究、产品设计等场景的实战案例。',
+                date: '2024-01',
+                link: '#',
+                isPaid: false
+            },
+            {
+                title: '5 个问题：AI 如何重塑财富管理行业？',
+                category: 'AI+ 财富管理',
+                summary: '通过五个核心问题，深入分析 AI 技术在财富管理领域的应用场景、价值创造和未来趋势。',
+                date: '2024-01',
+                link: '#',
+                isPaid: false
+            },
+            {
+                title: '财富管理 C 端 AI Agent 竞品分析',
+                category: 'AI+ 财富管理',
+                summary: '全面对比国内外主流财富管理 AI Agent 产品，分析产品定位、功能特性和用户体验。（付费内容）',
+                date: '2024-03',
+                link: '#',
+                isPaid: true
+            },
+            {
+                title: '当账户制遇上 00 后：我为什么想用 AI 设计财务自由计算器？',
+                category: 'AI+ 财富管理',
+                summary: '结合年轻用户的理财需求和行为特点，探索如何用 AI 打造更智能、更友好的财务规划工具。',
+                date: '2024-02',
+                link: '#',
+                isPaid: false
+            },
+            {
+                title: '实战指南：如何用 Coze 打造基金业务合规助手？',
+                category: 'AI+ 财富管理',
+                summary: '详细讲解使用 Coze 平台构建金融合规 AI 助手的全流程，包括知识库搭建、Prompt 设计和测试优化。',
+                date: '2024-01',
+                link: '#',
+                isPaid: false
+            },
+            {
+                title: '客群经营、品类经营、流量经营策略',
+                category: '产品方法论',
+                summary: '分享互联网金融产品运营的三大核心策略，如何通过精准运营驱动用户增长和业务转化。',
+                date: '2023-11',
+                link: '#',
+                isPaid: false
+            },
+            {
+                title: '理财 100：普通人理财系列',
+                category: '理财 100',
+                summary: '涵盖 101 个理财话题的系列专栏，帮助普通投资者建立科学的理财认知和实践方法。',
+                date: '2023-10',
+                link: '#',
+                isPaid: false
+            },
+            {
+                title: 'agent100：手搓 agent 项目库',
+                category: 'agent100',
+                summary: '记录 100 个 AI Agent 实战项目，分享从零到一打造智能助手的经验和踩坑心得。',
+                date: '2024-03',
+                link: '#',
+                isPaid: false
+            }
+        ];
+
+        // Render articles
+        function renderArticles(filterCategory = '全部') {
+            articlesGrid.innerHTML = '';
+            const filteredArticles = filterCategory === '全部'
+                ? articlesData
+                : articlesData.filter(article => article.category === filterCategory);
+
+            filteredArticles.forEach(article => {
+                const articleElement = articleTemplate.cloneNode(true);
+                articleElement.classList.remove('hidden', 'article-template');
+                articleElement.classList.add('fade-in-up');
+
+                // Fill data
+                articleElement.querySelector('.article-title').textContent = article.title;
+                articleElement.querySelector('.category-text').textContent = article.category;
+                articleElement.querySelector('.article-summary').textContent = article.summary;
+                articleElement.querySelector('.article-date').textContent = article.date;
+                articleElement.querySelector('.article-link').href = article.link;
+
+                // Show paid badge if needed
+                if (article.isPaid) {
+                    articleElement.querySelector('.paid-badge').classList.remove('hidden');
+                }
+
+                articlesGrid.appendChild(articleElement);
+            });
+        }
+
+        // Initialize articles
+        renderArticles();
+
+        // Category tab switching
+        categoryTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Update active tab
+                categoryTabs.forEach(t => {
+                    t.classList.remove('bg-[#00B8D4]', 'text-white', 'shadow-lg', 'scale-105');
+                    t.classList.add('bg-white', 'text-gray-700', 'hover:bg-gray-100');
+                });
+                tab.classList.add('bg-[#00B8D4]', 'text-white', 'shadow-lg', 'scale-105');
+                tab.classList.remove('bg-white', 'text-gray-700', 'hover:bg-gray-100');
+
+                // Filter articles
+                const category = tab.getAttribute('data-category');
+                renderArticles(category);
+            });
+        });
+
+        // WeChat QR modal functionality
+        const wechatBtn = document.getElementById('wechat-btn');
+        const wechatModal = document.getElementById('wechat-modal');
+        const closeWechatModal = document.getElementById('close-wechat-modal');
+        const footerWechatBtn = document.getElementById('footer-wechat-btn');
+
+        if (wechatBtn) {
+            wechatBtn.addEventListener('click', () => {
+                wechatModal.classList.remove('hidden');
+            });
+        }
+
+        if (footerWechatBtn) {
+            footerWechatBtn.addEventListener('click', () => {
+                wechatModal.classList.remove('hidden');
+            });
+        }
+
+        if (closeWechatModal) {
+            closeWechatModal.addEventListener('click', () => {
+                wechatModal.classList.add('hidden');
+            });
+        }
+
+        // Close modal when clicking outside
+        wechatModal.addEventListener('click', (e) => {
+            if (e.target === wechatModal) {
+                wechatModal.classList.add('hidden');
+            }
+        });
+
+        // Official QR code toggle
+        const officialQrBtn = document.getElementById('official-qr-btn');
+        const officialQrContainer = document.getElementById('official-qr-container');
+
+        if (officialQrBtn && officialQrContainer) {
+            officialQrBtn.addEventListener('click', () => {
+                const isHidden = officialQrContainer.classList.contains('hidden');
+                if (isHidden) {
+                    officialQrContainer.classList.remove('hidden');
+                    officialQrBtn.innerHTML = '<i class="fas fa-qrcode"></i> 隐藏二维码';
+                } else {
+                    officialQrContainer.classList.add('hidden');
+                    officialQrBtn.innerHTML = '<i class="fas fa-qrcode"></i> 显示二维码';
+                }
+            });
+        }
+
+        // Fade-in animation on scroll
+        const fadeElements = document.querySelectorAll('.fade-in-up');
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        fadeElements.forEach(el => {
+            el.style.animationPlayState = 'paused';
+            observer.observe(el);
+        });
+
+        // Initialize active section on load
+        setActiveSection();
+    </script>
 </body>
 </html>
