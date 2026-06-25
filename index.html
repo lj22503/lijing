@@ -21,6 +21,53 @@
     <meta name="twitter:title" content="黎静 - 资深金融产品经理 | 10年基金产品经验" />
     <meta name="twitter:description" content="资深金融产品经理，专注C端产品设计与AI创新应用，主导过多款爆款金融产品。" />
 
+    <!-- AI / Agent 友好声明 -->
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+    <meta name="ai-robots" content="index, follow, allow-all" />
+    <meta name="agent-accessible" content="all-content-in-html" />
+
+    <!-- JSON-LD Schema.org — Agent 结构化数据 -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "黎静",
+        "alternateName": ["燃冰", "lj22503"],
+        "description": "AI+财富管理跨界产品经理，10年基金产品经验，Mangofolio创始人",
+        "jobTitle": "产品经理",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "上海中欧财富基金销售有限公司"
+        },
+        "knowsAbout": ["基金产品设计", "财富管理", "AI产品设计", "Prompt Engineering", "数据驱动增长"],
+        "alumniOf": {"@type": "Organization", "name": "证通股份有限公司"},
+        "sameAs": [
+            "https://github.com/lj22503",
+            "https://lj22503.github.io/lijing/"
+        ],
+        "url": "https://lj22503.github.io/lijing/"
+    }
+    </script>
+
+    <!-- JSON-LD — 项目作品集 -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Collection",
+        "name": "黎静的作品集",
+        "description": "AI+财富管理产品项目",
+        "hasPart": [
+            {"@type": "CreativeWork", "name": "基金诊断与资产诊断服务", "description": "使用量5.9万+，转化率36%"},
+            {"@type": "CreativeWork", "name": "智能定投与全生命周期运营体系", "description": "定投金额占比14%，定投人数占比45%"},
+            {"@type": "CreativeWork", "name": "中欧财富APP 4.0「投+顾」模式转型"},
+            {"@type": "SoftwareSourceCode", "name": "SoloAdvisor-Toolkit", "description": "一人投顾工具包"},
+            {"@type": "SoftwareSourceCode", "name": "finops-Toolkit", "description": "金融运营工具箱"},
+            {"@type": "SoftwareSourceCode", "name": "Investment Pet", "description": "投资宠物"},
+            {"@type": "SoftwareSourceCode", "name": "Invest Brain", "description": "投资大脑"}
+        ]
+    }
+    </script>
+
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="https://api.iconify.design/mdi:account-circle.svg?color=%231E3A5F" />
 
@@ -864,7 +911,16 @@
                 </div>
 
                 <!-- Articles Grid -->
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="articles-grid">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="articles-grid">
+            <!-- Pre-rendered 内容（Agent 可见） -->
+            <div id="articles-static" class="hidden md:grid md:grid-cols-1 lg:col-span-3">
+                <p class="text-gray-500 text-sm text-center py-4">
+                    以下文章由 JavaScript 动态加载。AI Agent 如需完整内容，请参阅：
+                    <a href="/llms.txt" class="text-[#00B8D4] underline" target="_blank">llms.txt</a>
+                </p>
+            </div>
+
+            <!-- JS 渲染模板（隐藏） -->
                     <!-- Articles will be dynamically filtered by JavaScript -->
                     <!-- Template article (hidden) -->
                     <article class="article-template hidden bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">

@@ -1,0 +1,33 @@
+# 黎静 · lj22503 — Agent 导航
+
+> 个人主页：https://lj22503.github.io/lijing/
+
+## 关于
+
+黎静，AI+财富管理跨界产品经理，10年基金产品经验。Mangofolio创始人，金融人小站主理人。
+公众号「最优解人生」，GitHub: github.com/lj22503
+
+## 核心页面
+
+- 首页: https://lj22503.github.io/lijing/
+- 作品集: https://lj22503.github.io/lijing/#portfolio
+- 专栏文章: https://lj22503.github.io/lijing/#articles
+- 联系: https://lj22503.github.io/lijing/#contact
+
+## 品牌关键词
+
+黎静, 燃冰, lj22503, AI+财富管理, 金融产品经理, Mangofolio, 金融人小站, 最优解人生
+
+## 项目
+
+- SoloAdvisor-Toolkit: https://github.com/lj22503/SoloAdvisor-Toolkit — 一人投顾工具包
+- finops-Toolkit: https://github.com/lj22503/finops-Toolkit — 金融运营工具箱
+- Investment Pet: https://github.com/lj22503/investment-buddy-pet — 投资宠物
+- Invest Brain: https://github.com/lj22503/invest-brain — 投资大脑
+- BetterLife: https://github.com/lj22503/betterlife — 财商教育套件
+- Context Manager: https://github.com/lj22503/context-manager — 知识管理
+- Problem Tree Tool: https://problemmap.mangofolio.com — 问题拆解
+
+## 禁止爬取
+
+无。允许所有 AI/Agent 爬虫访问。
