@@ -15,13 +15,14 @@
 ## 文件结构
 
 ```
-portfolio-website/
-├── index.html          # 主页面（包含所有 HTML、CSS 和 JavaScript）
-├── README.md          # 本说明文件
-└── .nojekyll          # 防止 GitHub Pages 使用 Jekyll 处理
+lijing/
+├── index.html          # 主页面（包含所有 HTML、CSS 和 JavaScript，94KB 单文件）
+├── images/             # 站内图片资源
+├── README.md           # 本说明文件
+└── .nojekyll           # 防止 GitHub Pages 使用 Jekyll 处理
 ```
 
-**注意**：原 `css/` 和 `js/` 文件夹中的文件已不再需要，所有样式和脚本都已内联在 `index.html` 中。
+> 说明：本仓库只含静态成品（index.html 内联全部代码 + 本地图片）。原 css/ 和 js/ 已删除（2026-07-30 neat-freak），index.html 不依赖任何本地 css/js（仅用 Tailwind / Font Awesome / Google Fonts CDN）。原始生成代码不可用，如需重大改动建议重做。
 
 ## 如何部署到 GitHub Pages
 
